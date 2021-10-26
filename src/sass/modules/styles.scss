@@ -1,0 +1,19 @@
+@use './utilities.scss' as utilities;
+@use './variables' as variables;
+@use './base' as base;
+@use './modules' as modules;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+body {
+    width: 100%;
+    color: variables.$dark;
+}
+
+#root {
+    height: 100%;
+}

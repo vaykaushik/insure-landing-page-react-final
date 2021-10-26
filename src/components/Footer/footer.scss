@@ -1,0 +1,170 @@
+@use '../../sass/modules/variables';
+@use '../../sass/modules/utilities';
+
+.footer {
+    position: relative;
+    margin-top: 8rem;
+    
+
+    .footer__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: variables.$very-light-gray;
+
+            .footer__waves {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                img {
+                    z-index: 10;
+                }
+
+                .footer__waves--desktop {
+                    display: none;
+                }
+            }
+
+            .footer__row {
+                margin-top: 5rem;
+
+                .footer__left__list {
+
+                    .footer__socials {
+                        padding: 1.6rem 0;
+                        margin-bottom: 1rem;
+
+                        a {
+                            padding: 0 0.4rem;
+                            color: variables.$dark-grayish-violet;
+                            font-size: 1.7rem;
+
+                            &:hover {
+                                color: variables.$very-dark-violet;
+                            }
+                        }
+                    }
+
+                    .footer__column__two {
+
+                        width: 85vw;
+                        border-top: 1px solid variables.$dark-grayish-violet;
+                        padding-top: 3rem;
+
+                        h3 {
+                            font-size: 0.95rem;
+                            text-transform: uppercase;
+                            font-family: variables.$karla;
+                            font-weight: variables.$bold-font;
+                            color: variables.$dark-grayish-violet;
+                        }
+
+                        ul {
+                            margin: 1.25rem 0;
+
+                            li {
+                                padding: 0.33rem 0;
+                                text-transform: uppercase;
+                                font-size: 0.9rem;
+                                font-family: variables.$karla;
+                                font-weight: variables.$bold-font;
+
+                                a {
+                                    color: variables.$dark-violet;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}
+
+// Desktop Styling Below
+
+@media screen and (min-width: 30rem) { // 480px 
+    .footer {
+        position: relative;
+        margin-top: 7rem;
+        background-color: hsl(201, 11%, 93%);
+        position: static;
+        bottom: 0;
+        width: 100vw;
+
+        .footer__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+
+            .footer__waves {
+
+                .footer__waves--desktop {
+                    position: absolute;
+                    left: 0;
+                }
+
+                .footer__waves--mobile {
+                    display: none;
+                }
+            }
+
+            .footer__row {
+
+                .footer__left__list {
+
+                    .footer__column__one {
+
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 1.5rem;
+                        padding: 0;
+
+                        div {
+                            margin: 0;
+                            padding: 0;
+
+                            img {
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+
+                        .footer__socials {
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+
+                    .footer__column__two {
+                        display: flex;
+                        margin-bottom: 4rem;
+                        text-align: left;
+                        padding: 3% 0;
+                        margin: 0;
+                        width: 75vw;
+
+                        ul {
+                            margin: 1rem 0;
+                        }
+
+                        div {
+                            
+                            margin: 0;
+                            padding: 0;
+
+                            &:not(:last-child) {
+                                margin-right: 18%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

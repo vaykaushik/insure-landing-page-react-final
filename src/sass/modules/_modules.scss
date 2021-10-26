@@ -1,0 +1,16 @@
+@use '../../sass/modules/variables';
+
+// Header & Nav
+
+@mixin mobile-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: variables.$very-light-gray;
+    width: 100%;
+}
+
+@mixin mobile-nav {
+    background-color: variables.$very-light-gray;
+}

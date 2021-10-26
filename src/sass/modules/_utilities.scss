@@ -1,0 +1,22 @@
+// General Mixins 
+
+// --- For Responsiveness --- //
+
+@mixin breakpoint($point) {
+    @if $point == md {
+        @media (min-width: 30em) {
+            @content;
+        }
+    }
+}
+
+@mixin mobileDefaultContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1 100%;
+    display: block;
+
+    @include breakpoint(md) {
+        padding: 0 12.4%;
+    }
+}
